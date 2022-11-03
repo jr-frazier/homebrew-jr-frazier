@@ -5,11 +5,11 @@
 class GoCli2 < Formula
   desc ""
   homepage "https://github.com/jr-frazier/go-cli2"
-  version "0.3"
+  version "0.3.1"
 
   on_macos do
-    url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3/go-cli2_0.3_darwin_all.tar.gz"
-    sha256 "3d5894b16b390ea5732c2ed045765f5eadcdbaaf28400886b565db515a3a6970"
+    url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.1/go-cli2_0.3.1_darwin_all.tar.gz"
+    sha256 "3e8dcd12c6ca6be5253f9d4c74df2317d670cf7f5085c670d973f44fa7a4cd26"
 
     def install
       bin.install "go-cli2"
@@ -18,16 +18,16 @@ class GoCli2 < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3/go-cli2_0.3_linux_arm64.tar.gz"
-      sha256 "41235e619c13985c2b0c481319b6187cb0371ae58cb11a841a9949fb6e2038c0"
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.1/go-cli2_0.3.1_linux_arm64.tar.gz"
+      sha256 "ce37652c8ba704f21c10328db1480d3711024705965a8dc71f24860fba77dcd5"
 
       def install
         bin.install "go-cli2"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3/go-cli2_0.3_linux_amd64.tar.gz"
-      sha256 "053a154f1af8ea3d2e0e6e55ff1b906bbc4d18e337ccf601cffc8c379b580441"
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.1/go-cli2_0.3.1_linux_amd64.tar.gz"
+      sha256 "4d89eebafd8d069998550dae0ec7e9a1878b07e36088ed1b00bae3a675d4d0f5"
 
       def install
         bin.install "go-cli2"
