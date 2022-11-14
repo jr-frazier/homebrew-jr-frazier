@@ -5,29 +5,29 @@
 class GoCli2 < Formula
   desc ""
   homepage "https://github.com/jr-frazier/go-cli2"
-  version "0.2.2"
+  version "0.3.6"
 
   on_macos do
-    url "https://github.com/jr-frazier/perfops-cli/releases/download/v0.2.2/perfops-cli_0.2.2_Darwin_all.tar.gz"
-    sha256 "28db311e1515e343d4c91d6b6c9802069cdaadeeb9b41d13bf2f317d5ec66443"
+    url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.6/go-cli2_0.3.6_Darwin_all.tar.gz"
+    sha256 "a5bbb9417c9f2610f23df3852ec6be7fe3762b3c97be16ce71550500ea63a4c3"
 
     def install
-      bin.install "perfops-cli"
+      bin.install "go-cli2"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jr-frazier/perfops-cli/releases/download/v0.2.2/perfops-cli_0.2.2_Linux_arm64.tar.gz"
-      sha256 "53a14b3cc246f9fc8259670a0e871658e86e6915091aee243b33faacb5941b97"
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.6/go-cli2_0.3.6_Linux_arm64.tar.gz"
+      sha256 "b7ed381c3933fc4d408d46974ac24bffdcbf57ce5abcf9dcbd126919d0294745"
 
       def install
         bin.install "go-cli2"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jr-frazier/perfops-cli/releases/download/v0.2.2/perfops-cli_0.2.2_Linux_x86_64.tar.gz"
-      sha256 "ab59ec9d5af188962ede7ac725406204eb2cb5ed68c746960a16a654897ef192"
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.6/go-cli2_0.3.6_Linux_x86_64.tar.gz"
+      sha256 "e6b1b08d3e09ea8e45384f329b52744eaae36ed71707ccfe331f7fb13583ace5"
 
       def install
         bin.install "go-cli2"
