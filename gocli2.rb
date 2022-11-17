@@ -5,20 +5,20 @@
 class Gocli2 < Formula
   desc ""
   homepage "https://github.com/jr-frazier/go-cli2"
-  version "0.3.14"
+  version "0.3.17"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.14/go-cli2_0.3.14_Darwin_arm64.tar.gz"
-      sha256 "f7852bd0e536e6666823ef888b133dcf5f30789ca8454f3ebecaf91faf3cd242"
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.17/go-cli2_0.3.17_Darwin_arm64.tar.gz"
+      sha256 "27610039964503c0fe802e4f7f55c8ffbf0e2e87bbc73076f91344eb04873943"
 
       def install
         bin.install "gocli2"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.14/go-cli2_0.3.14_Darwin_x86_64.tar.gz"
-      sha256 "88a7b2f5551911d74e3c61cc30573a4fd285b37e1a0bfbf0213b7754b41a231d"
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.17/go-cli2_0.3.17_Darwin_x86_64.tar.gz"
+      sha256 "54ab4146a79604599636562838e13a6296fc02571ea8da81e823c84271be749b"
 
       def install
         bin.install "gocli2"
@@ -27,17 +27,17 @@ class Gocli2 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.14/go-cli2_0.3.14_Linux_x86_64.tar.gz"
-      sha256 "7456e334772d320068842ca3392aac95eaf7120e126e2760bdd87e24f262fc64"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.17/go-cli2_0.3.17_Linux_arm64.tar.gz"
+      sha256 "5295ca8ff087f5792a026752023fb2c759cfe0ee0d8a91d96912810c2eb3a949"
 
       def install
         bin.install "gocli2"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.14/go-cli2_0.3.14_Linux_arm64.tar.gz"
-      sha256 "bc3f6619c07e03c27ed06cfd858f8f612b271d3e77d37abc017782eeb878284f"
+    if Hardware::CPU.intel?
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.17/go-cli2_0.3.17_Linux_x86_64.tar.gz"
+      sha256 "7709221ce7c5e3e65e37d30a062b9ff40f9d82f9a747d10dea69d8b10d3fca63"
 
       def install
         bin.install "gocli2"
