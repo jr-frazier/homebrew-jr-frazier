@@ -5,20 +5,20 @@
 class Gocli2 < Formula
   desc ""
   homepage "https://github.com/jr-frazier/go-cli2"
-  version "0.3.19"
+  version "0.3.20"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.19/go-cli2_0.3.19_Darwin_arm64.tar.gz"
-      sha256 "a80ade88f382d4b272b55eeb5f4a4acc3f7a6974a8e0c2dc43fcc7ce6dfce75c"
+    if Hardware::CPU.intel?
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.20/go-cli2_0.3.20_Darwin_x86_64.tar.gz"
+      sha256 "c045cadef435874d3eea9bc6866453e83e4d555dde0d88cf59d11af484537b4a"
 
       def install
         bin.install "gocli2"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.19/go-cli2_0.3.19_Darwin_x86_64.tar.gz"
-      sha256 "f022e2faedb41d9aec3ab0e3f4fb147af8232dbee4408ab1e38e4db27a0eb6d4"
+    if Hardware::CPU.arm?
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.20/go-cli2_0.3.20_Darwin_arm64.tar.gz"
+      sha256 "3311578cc6ad83340de059d6269fed4f313ebf06f7b0d62114de2dabf3fe7c04"
 
       def install
         bin.install "gocli2"
@@ -27,17 +27,17 @@ class Gocli2 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.19/go-cli2_0.3.19_Linux_x86_64.tar.gz"
-      sha256 "50703e589cf52ff24d7a28e667e3500f99e91758593cc4485f25e197ce5b5930"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.20/go-cli2_0.3.20_Linux_arm64.tar.gz"
+      sha256 "2ae24630672481d8718aeea6518998f607ec478962d4fc29a4ed24ed3d667dff"
 
       def install
         bin.install "gocli2"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.19/go-cli2_0.3.19_Linux_arm64.tar.gz"
-      sha256 "69a017404b037bb6a1c7ec30821b0bc36eb95a41bf74377e2b5164c8eae8ee10"
+    if Hardware::CPU.intel?
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.20/go-cli2_0.3.20_Linux_x86_64.tar.gz"
+      sha256 "babcb0269621106aa032cb1101704e80331835bccde46aec38bc4ba40a286a92"
 
       def install
         bin.install "gocli2"
