@@ -5,20 +5,20 @@
 class Gocli2 < Formula
   desc ""
   homepage "https://github.com/jr-frazier/go-cli2"
-  version "0.3.40"
+  version "0.3.41"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.40/go-cli2_0.3.40_Darwin_arm64.tar.gz"
-      sha256 "8e3626410794b6142bae2feec8f0a8bfa0ee80d56e19d88a73f32400299f4d88"
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.41/go-cli2_0.3.41_Darwin_arm64.tar.gz"
+      sha256 "36251771082ec510676f4089d7d3debc75000da1a11a3ce4c5a00ad7ce667abc"
 
       def install
         bin.install "gocli2"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.40/go-cli2_0.3.40_Darwin_x86_64.tar.gz"
-      sha256 "db2d0bcb6354123bb17ccefd05c8832cb39eed9c01f8a78b696f55ec5ff8b340"
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.41/go-cli2_0.3.41_Darwin_x86_64.tar.gz"
+      sha256 "13b985ae5c35b2b537f10aabd731e12e1df5b1063b058522f884841d9ff5f93c"
 
       def install
         bin.install "gocli2"
@@ -28,16 +28,16 @@ class Gocli2 < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.40/go-cli2_0.3.40_Linux_x86_64.tar.gz"
-      sha256 "3288d642e89c315e6a356f0d9677400ec1918b0e2d17ca9a21c316cf9409dc40"
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.41/go-cli2_0.3.41_Linux_x86_64.tar.gz"
+      sha256 "6f5e529ccbd3c76c6f8dc3ed51a75480cb23dd34f560ebe1a5579d20d9123364"
 
       def install
         bin.install "gocli2"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.40/go-cli2_0.3.40_Linux_arm64.tar.gz"
-      sha256 "fe066f3f5e1531079623f9f03f67e4b9b9fc6d694d72a104377f0aadfd2cbbac"
+      url "https://github.com/jr-frazier/go-cli2/releases/download/v0.3.41/go-cli2_0.3.41_Linux_arm64.tar.gz"
+      sha256 "b06676965b75ce2dce20103ec7615adb980be389d92db8693ebf38c279ffb6fa"
 
       def install
         bin.install "gocli2"
